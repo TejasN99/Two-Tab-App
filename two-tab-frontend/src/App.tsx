@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, CSSProperties } from "react";
 import CalculatorTab from "./components/CalculatorTab";
 import ShaderTab from "./components/ShaderTab";
 
 export default function App() {
   const [tab, setTab] = useState<"calc" | "shader">("calc");
 
-  const navbarStyle = {
+  const navbarStyle: CSSProperties = {
     position: "fixed",
     top: 0,
     left: 0,
@@ -21,32 +21,33 @@ export default function App() {
     borderBottomRightRadius: "24px",
     width: "100%",
   };
-
-  const buttonStyle = {
+  
+  const buttonStyle: CSSProperties = {
     padding: "12px 24px",
     borderRadius: "20px",
     fontSize: "1rem",
-    fontWeight: "500",
-    lineHeight: "1.5",
+    fontWeight: 500,
+    lineHeight: 1.5,
     transition: "all 0.3s ease-in-out",
     cursor: "pointer",
     border: "none",
     outline: "none",
   };
-
-  const activeButtonStyle = {
+  
+  const activeButtonStyle: CSSProperties = {
     ...buttonStyle,
     backgroundColor: "#ffffff",
     color: "#3b82f6",
     boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
     transform: "scale(1.05)",
   };
-
-  const inactiveButtonStyle = {
+  
+  const inactiveButtonStyle: CSSProperties = {
     ...buttonStyle,
     backgroundColor: "transparent",
     color: "#ffffff",
   };
+  
 
   return (
     <>
