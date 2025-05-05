@@ -1,4 +1,5 @@
 {
+  "homepage": "https://TejasN99.github.io/two_app_repo",
   "name": "two-tab-frontend",
   "private": true,
   "version": "0.0.0",
@@ -6,10 +7,13 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
